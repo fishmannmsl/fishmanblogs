@@ -7,10 +7,10 @@
             h4{font-weight: normal;font-size: 16px;color: #333;}
         </style>
 </head>
-<body id="mbook-intro">
+<body id="fishmanblogs-intro">
 {{template "widgets/header.html" .}}
 <div class="container">
-    <div class="row mbook-info">
+    <div class="row fishmanblogs-info">
         <div class="col-xs-12">
             <h1>{{.Book.BookName}}
                  {{if eq $.Member.MemberId $.Book.MemberId}}
@@ -26,8 +26,8 @@
         </div>
         <div class="col-sm-9 col-xs-6">
             <ul class="none-listyle">
-                <!--<li class="mbook-score"><span>文档评分：</span>
-                    <i class="mbook-star star-{{.Book.Score}}"></i>
+                <!--<li class="fishmanblogs-score"><span>文档评分：</span>
+                    <i class="fishmanblogs-star star-{{.Book.Score}}"></i>
                     {{.Book.ScoreFloat}}
                     （<span class="text-muted">{{.Book.CntScore}} 个有效评分</span>）
                 </li>-->
@@ -82,7 +82,7 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-xs-12 mbook-menu">
+        <div class="col-xs-12 fishmanblogs-menu">
             <ul class="nav nav-tabs">
                 <li {{if eq .Tab "default"}}class="active"{{end}}><a href="{{urlfor "DocumentController.Index" ":key" $.Book.Identify}}"><span class="hidden-xs">文档</span>目录</a></li>
                 <li {{if eq .Tab "comment"}}class="active"{{end}}><a href="{{urlfor "DocumentController.Index" ":key" $.Book.Identify}}?tab=comment"><span class="hidden-xs">文档</span>评论 (<span class="text-muted">{{$.Book.CntComment}}</span>)</a></li>
@@ -94,7 +94,7 @@
                             <li class="comments-form clearfix">
                                 <div class="score">
                                     {{if gt $.MyScore 0}}
-                                    <span class="text-muted">我的评分: <i class="mbook-star star-{{$.MyScore}}"></i></span>
+                                    <span class="text-muted">我的评分: <i class="fishmanblogs-star star-{{$.MyScore}}"></i></span>
                                     {{else}}
                                     <span title="点击即可给当前文档打分" class="cursor-pointer" data-url="{{urlfor "BookController.Score" ":id" $.Book.BookId}}" data-toggle="tooltip">
                                         <i class="fa fa-star-o" data-score="1" data-tips="很差"></i>
@@ -124,7 +124,7 @@
                                         <div class="col-xs-12">
                                             <img src="{{showImg .Avatar "avatar"}}" class="img-thumbnail img-circle img-responsive" alt="自由编程">
                                             <span class="username">{{.Nickname}}</span>
-                                            <span>评分:<i class="mbook-star star-{{.Score}}"></i></span>
+                                            <span>评分:<i class="fishmanblogs-star star-{{.Score}}"></i></span>
                                             <span class="text-muted hidden-xs pull-right">{{date .TimeCreate "Y-m-d H:i:s"}}</span>
                                         </div>
                                         <div class="col-xs-12 comments-content">{{.Content}}</div>
@@ -172,8 +172,8 @@
 <script type="text/javascript" src="/static/js/main.js?version={{$.Version}}"></script>
 <script>
 $(function(){
-    $("#mbook-intro .mbook-info img").click(function(){
-        location.href=$("#mbook-intro .mbook-info .none-listyle .btn-success").attr("href");
+    $("#fishmanblogs-intro .fishmanblogs-info img").click(function(){
+        location.href=$("#fishmanblogs-intro .fishmanblogs-info .none-listyle .btn-success").attr("href");
     })
 })
 </script>

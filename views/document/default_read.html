@@ -12,7 +12,7 @@
     <link href="{{$.StaticDomain}}/static/nprogress/nprogress.css" rel="stylesheet">
     <link href="{{$.StaticDomain}}/static/editor.md/css/editormd.preview.css" rel="stylesheet">
     <link href="{{$.StaticDomain}}/static/css/toast.css" rel="stylesheet">
-    <link href="/static/css/mbook.css?version={{$.Version}}"rel="stylesheet">
+    <link href="/static/css/fishmanblogs.css?version={{$.Version}}"rel="stylesheet">
     <link rel="stylesheet" href="/static/katex/katex.min.css">
     <script src="/static/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="/static/respond.js/1.4.2/respond.min.js"></script>
@@ -37,7 +37,7 @@
                 <span style="font-size: 12px;font-weight: 100;"></span>
             </div>
             <div class="navbar-header pull-right manual-menu">
-                <div class="mbook-item">
+                <div class="fishmanblogs-item">
                     <a title="首页" href="/" class="btn btn-link"><i class="fa fa-home"></i> 首页</a>
                     {{if eq $.Member.MemberId $.Model.MemberId}}
                         <a href="{{urlfor "DocumentController.Edit" ":key" .Model.Identify ":id" .DocId}}" title="编辑" class="btn btn-link btn-edit" data-url="{{urlfor "DocumentController.Edit" ":key" .Model.Identify ":id" ""}}"><i class="fa fa-edit"></i> 编辑文档</a>
@@ -82,7 +82,7 @@
                     {{/*<div class="jump-top">*/}}
                         {{/*<a href="javascript:;" class="view-backtop"><i class="fa fa-arrow-up" aria-hidden="true"></i></a>*/}}
                     {{/*</div>*/}}
-                    <div class="mbook-bars">
+                    <div class="fishmanblogs-bars">
                         <ul>
 
                             <li class="visible-xs visible-sm bars-menu bars-menu-hide"><a href="/" title="首页"><i class="fa fa-home"></i></a></li>
@@ -139,7 +139,7 @@
 
                 <div class="m-copyright">
                     <p>
-                        本文档使用 <a href="//www.ziyoubiancheng.com" style="color: #0e8c8c;font-weight: bold" target="_blank">mbook</a> 构建
+                        本文档使用 <a href="//www.ziyoubiancheng.com" style="color: #0e8c8c;font-weight: bold" target="_blank">fishmanblogs</a> 构建
                     </p>
                 </div>
         </div>
@@ -163,7 +163,7 @@
 <script type="text/javascript" src="{{$.StaticDomain}}/static/js/toast.script.js"></script>
 <script type="text/javascript" src="/static/js/jquery.qrcode.min.js"></script>
 <script type="text/javascript" src="/static/js/clipboard.min.js"></script>
-<script type="text/javascript" src="/static/js/mbook.js?version={{$.Version}}"></script>
+<script type="text/javascript" src="/static/js/fishmanblogs.js?version={{$.Version}}"></script>
 <script type="text/javascript" src="/static/js/main.js?version={{$.Version}}"></script>
 <script type="text/javascript" src="/static/katex/katex.min.js"></script>
 

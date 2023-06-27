@@ -159,11 +159,11 @@ $(function () {
            var cm = window.editor.cm;
            var selection = cm.getSelection();
            if (selection === "") {
-               cm.replaceSelection("<mbook-summary></mbook-summary>" + selection);
+               cm.replaceSelection("<fishmanblogs-summary></fishmanblogs-summary>" + selection);
            }else {
                var selectionText = selection.split("\n");
                for (var i = 0, len = selectionText.length; i < len; i++) {
-                   selectionText[i] = (selectionText[i] === "") ? "" : "<mbook-summary></mbook-summary>" + selectionText[i];
+                   selectionText[i] = (selectionText[i] === "") ? "" : "<fishmanblogs-summary></fishmanblogs-summary>" + selectionText[i];
                }
                cm.replaceSelection(selectionText.join("\n"));
            }
@@ -171,11 +171,11 @@ $(function () {
            var cm = window.editor.cm;
            var selection = cm.getSelection();
            if (selection === "") {
-               cm.replaceSelection("<mbook-auto></mbook-auto>" + selection);
+               cm.replaceSelection("<fishmanblogs-auto></fishmanblogs-auto>" + selection);
            }else {
                var selectionText = selection.split("\n");
                for (var i = 0, len = selectionText.length; i < len; i++) {
-                   selectionText[i] = (selectionText[i] === "") ? "" : "<mbook-auto></mbook-auto>" + selectionText[i];
+                   selectionText[i] = (selectionText[i] === "") ? "" : "<fishmanblogs-auto></fishmanblogs-auto>" + selectionText[i];
                }
                cm.replaceSelection(selectionText.join("\n"));
            }
@@ -183,9 +183,9 @@ $(function () {
            var cm = window.editor.cm;
            var selection = cm.getSelection();
            var cursor    = cm.getCursor();
-           cm.replaceSelection("<mbook-git>" + selection + "</mbook-git>");
+           cm.replaceSelection("<fishmanblogs-git>" + selection + "</fishmanblogs-git>");
            console.log(cursor.line,cm.lineCount());
-           // cm.setCursor(cursor.line, cursor.ch + '<mbook-git>'.length);
+           // cm.setCursor(cursor.line, cursor.ch + '<fishmanblogs-git>'.length);
        }else if(name=="multi"){//批量创建文档
             $("#ModalMulti").modal("show");
        }else if(name=="spider"){//爬虫采集
